@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.intergalaxy'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs('src/main/java')
+        }
+
+        resources {
+            srcDirs('src/main/resources')
+        }
+
+    }
+}
+
+dependencies {
+    implementation("io.github.jnasmartcardio:jnasmartcardio:0.2.7")
+    implementation("org.slf4j:slf4j-api:2.0.17")
+    implementation 'ch.qos.logback:logback-classic:1.4.14'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
