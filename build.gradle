@@ -5,6 +5,15 @@ plugins {
 group = 'org.intergalaxy'
 version = '1.0-SNAPSHOT'
 
+java {
+    sourceCompatibility = JavaVersion.toVersion("21")
+    targetCompatibility = JavaVersion.toVersion("21")
+}
+
+tasks.withType(Copy).configureEach {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
 repositories {
     mavenCentral()
 }
