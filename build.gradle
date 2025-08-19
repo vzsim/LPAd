@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 group = 'org.intergalaxy'
@@ -36,7 +37,6 @@ dependencies {
     implementation("org.slf4j:slf4j-api:2.0.17")
     implementation 'ch.qos.logback:logback-classic:1.4.14'
 
-    testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
